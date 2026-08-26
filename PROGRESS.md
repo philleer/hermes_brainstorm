@@ -1,6 +1,6 @@
 # 学习进度看板
 
-手机端进度主页（更新于 2026-08-26 17:45 CST）：
+手机端进度主页（更新于 2026-08-26 18:11 CST）：
 
 https://philleer.github.io/hermes_brainstorm
 
@@ -40,18 +40,18 @@ https://philleer.github.io/hermes_brainstorm
 
 #### [Phase 1 学习计划](https://github.com/philleer/hermes_brainstorm/blob/main/topics/ai-ml/phase1-study-plan.md) — 0/12 (0%)
 
-- [ ] Day 1 (周一) — 浮点数二进制表示
-- [ ] Day 2 (周二) — 浮点数精度与范围
-- [ ] Day 3 (周三) — 量化公式推导
-- [ ] Day 4 (周四) — 量化误差分析
-- [ ] Day 5 (周五) — Per-tensor vs Per-channel
-- [ ] Day 6 (周六) — 复习 + Cheat Sheet
-- [ ] Day 7 (周日) — PyTorch 量化基础
-- [ ] Day 8 (周一) — PTQ 完整流程
-- [ ] Day 9 (周二) — FakeQuantize 深入
-- [ ] Day 10(周三) — 敏感度可视化
-- [ ] Day 11(周四) — 综合实验
-- [ ] Day 12(周五) — 总结 + Phase 2 衔接
+- [ ] Day 1 (Wed 08-26) — 浮点数二进制表示
+- [ ] Day 2 (Thu 08-27) — 浮点数精度与范围
+- [ ] Day 3 (Fri 08-28) — 量化公式推导
+- [ ] Day 4 (Sat 08-29) — 量化误差分析
+- [ ] Day 5 (Sun 08-30) — Per-tensor vs Per-channel
+- [ ] Day 6 (Mon 08-31) — 复习 + Cheat Sheet
+- [ ] Day 7 (Tue 09-01) — PyTorch 量化基础
+- [ ] Day 8 (Wed 09-02) — PTQ 完整流程
+- [ ] Day 9 (Thu 09-03) — FakeQuantize 深入
+- [ ] Day 10(Fri 09-04) — 敏感度可视化
+- [ ] Day 11(Sat 09-05) — 综合实验
+- [ ] Day 12(Sun 09-06) — 总结 + Phase 2 衔接
 
 #### [Phase 1 知识清单](https://github.com/philleer/hermes_brainstorm/blob/main/topics/ai-ml/phase1-knowledge-checklist.md) — 0/9 (0%)
 

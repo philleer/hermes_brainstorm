@@ -16,7 +16,9 @@ Phase 5: 进阶            (持续)  混合精度、硬件感知、NAS+量化
 
 ---
 
-## Phase 1: 数值基础（1 周）
+## Phase 1: 数值基础（本周 + 下周 · 2026-08-26 → 09-06）
+
+> 详细日程见 [`phase1-study-plan.md`](./phase1-study-plan.md)；知识清单见 [`phase1-knowledge-checklist.md`](./phase1-knowledge-checklist.md)。
 
 ### 目标
 理解计算机如何表示数字，量化误差从哪来，为什么 8 个 bit 能近似 32 个 bit 的信息。
