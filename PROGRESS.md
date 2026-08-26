@@ -1,6 +1,8 @@
 # 学习进度看板
 
-> 手机端直接打开：[进度主页](https://philleer.github.io/hermes_brainstorm) · 更新于 2026-08-26 17:36 CST
+手机端进度主页（更新于 2026-08-26 17:45 CST）：
+
+https://philleer.github.io/hermes_brainstorm
 
 **总进度 0%**　0 / 79 已完成　剩余 79　Inbox 1 条
 

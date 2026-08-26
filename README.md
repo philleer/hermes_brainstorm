@@ -41,7 +41,7 @@ hermes_brainstorm/
 ### 克隆仓库
 
 ```bash
-git clone https://github.com/philleer/hermes_brainstorm.git
+git clone https://github.com/philleer/hermes_brainstorm
 cd hermes_brainstorm
 ```
 
@@ -70,7 +70,13 @@ cd hermes_brainstorm
 
 ## 📱 手机端监控进度
 
-打开 **[学习进度看板](https://philleer.github.io/hermes_brainstorm/)**，Safari / Chrome 里选「添加到主屏幕」，即可随时查看各主题完成度。
+手机浏览器打开下面地址，再选「添加到主屏幕」，即可随时查看各主题完成度：
+
+https://philleer.github.io/hermes_brainstorm
+
+GitHub 仓库：
+
+https://github.com/philleer/hermes_brainstorm
 
 | 场景 | 操作 |
 |------|------|

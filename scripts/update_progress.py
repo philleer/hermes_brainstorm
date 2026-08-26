@@ -150,7 +150,9 @@ def render_progress_md(data: dict) -> str:
     lines = [
         "# 学习进度看板",
         "",
-        f"> 手机端直接打开：[进度主页]({PAGES}) · 更新于 {data['generated_at']} CST",
+        f"手机端进度主页（更新于 {data['generated_at']} CST）：",
+        "",
+        PAGES,
         "",
         f"**总进度 {data['pct']}%**　{data['done']} / {data['total']} 已完成　剩余 {data['open']}　Inbox {data['inbox_files']} 条",
         "",
