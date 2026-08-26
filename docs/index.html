@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Hermes 进度">
+  <title>学习进度 · hermes_brainstorm</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #152033;
+      --line: #243049;
+      --text: #e8eef9;
+      --muted: #93a0b8;
+      --accent: #5eead4;
+      --warn: #fbbf24;
+      --ok: #86efac;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    body { padding: calc(18px + env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom)); }
+    h1 { font-size: 1.35rem; margin: 0 0 4px; }
+    h2 { font-size: 1.05rem; margin: 0; }
+    .sub { color: var(--muted); font-size: 0.86rem; margin-bottom: 18px; }
+    .hero {
+      background: linear-gradient(160deg, #134e4a, #152033 55%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px 18px 16px;
+      margin-bottom: 16px;
+    }
+    .pct { font-size: 3rem; font-weight: 730; letter-spacing: -0.04em; line-height: 1; color: var(--accent); }
+    .stats { display: flex; gap: 14px; margin-top: 12px; color: var(--muted); font-size: 0.9rem; }
+    .meter { height: 8px; background: #0b1220; border-radius: 99px; overflow: hidden; margin: 10px 0 12px; }
+    .meter.big { height: 10px; }
+    .meter span { display: block; height: 100%; background: linear-gradient(90deg, #2dd4bf, #a3e635); }
+    .track { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px; margin-bottom: 14px; }
+    .track header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; color: var(--muted); }
+    .file { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 10px; }
+    .file-head { display: flex; justify-content: space-between; gap: 8px; color: var(--text); text-decoration: none; }
+    .file-title { font-weight: 650; }
+    .file-stat { color: var(--muted); font-variant-numeric: tabular-nums; }
+    ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 0.92rem; }
+    li { margin: 4px 0; }
+    .ok { color: var(--ok); }
+    .muted { color: var(--muted); }
+    .more { margin: 6px 0 0; color: var(--warn); font-size: 0.82rem; }
+    .hint { color: var(--muted); font-size: 0.82rem; line-height: 1.5; }
+    a.btn { display: inline-block; margin-top: 10px; color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>hermes_brainstorm</h1>
+    <p class="sub">学习进度 · 2026-08-26 17:36 CST</p>
+    <div class="pct">0%</div>
+    <div class="meter big"><span style="width:0%"></span></div>
+    <div class="stats">
+      <span>已完成 0</span>
+      <span>剩余 79</span>
+      <span>Inbox 1</span>
+    </div>
+  </div>
+  
+<section class="track">
+  <header>
+    <h2>AI / 机器学习</h2>
+    <span>0/36 · 0%</span>
+  </header>
+  <div class="meter big"><span style="width:0%"></span></div>
+  
+<article class="file">
+  <a class="file-head" href="https://github.com/philleer/hermes_brainstorm/blob/main/topics/ai-ml/quantization-learning-roadmap.md">
+    <span class="file-title">量化与部署路线</span>
+    <span class="file-stat">0/15</span>
+  </a>
+  <div class="meter"><span style="width:0%"></span></div>
+  <ul><li>能手写出对称量化/非对称量化的公式</li><li>能解释为什么 B-bit 量化的理论 SNR ≈ 6.02B + 1.76 dB</li><li>能用 numpy 实现一个 toy quantizer</li><li>能手动画出 PTQ 的 calibration → 量化流程</li><li>能解释 per-channel 为什么比 per-tensor 好</li><li>能跑通一个 ResNet/MobileNet 的 INT8 量化</li><li>能量化前后精度差异 &lt; 2%</li><li>能解释为什么 Transformer 的激活值量化比 CNN 难</li></ul>
+  <p class='more'>还有 7 项</p>
+</article>
+<article class="file">
+  <a class="file-head" href="https://github.com/philleer/hermes_brainstorm/blob/main/topics/ai-ml/phase1-study-plan.md">
+    <span class="file-title">Phase 1 学习计划</span>
+    <span class="file-stat">0/12</span>
+  </a>
+  <div class="meter"><span style="width:0%"></span></div>
+  <ul><li>Day 1 (周一) — 浮点数二进制表示</li><li>Day 2 (周二) — 浮点数精度与范围</li><li>Day 3 (周三) — 量化公式推导</li><li>Day 4 (周四) — 量化误差分析</li><li>Day 5 (周五) — Per-tensor vs Per-channel</li><li>Day 6 (周六) — 复习 + Cheat Sheet</li><li>Day 7 (周日) — PyTorch 量化基础</li><li>Day 8 (周一) — PTQ 完整流程</li></ul>
+  <p class='more'>还有 4 项</p>
+</article>
+<article class="file">
+  <a class="file-head" href="https://github.com/philleer/hermes_brainstorm/blob/main/topics/ai-ml/phase1-knowledge-checklist.md">
+    <span class="file-title">Phase 1 知识清单</span>
+    <span class="file-stat">0/9</span>
+  </a>
+  <div class="meter"><span style="width:0%"></span></div>
+  <ul><li>Machine Epsilon（机器精度）：使 1.0 + ε ≠ 1.0 的最小 ε</li><li>ULP (Unit in the Last Place)：两个相邻浮点数之间的间距</li><li>Subnormal Number（非规格化数）：比最小规格化数更小的数</li><li>为什么 0.1 + 0.2 ≠ 0.3：0.1 和 0.2 在二进制中是无限循环小数，存储时已被截断</li><li>能用 numpy 手写对称/非对称量化函数（不看参考资料）</li><li>能解析一个 FP32 的二进制表示（sign/exponent/mantissa）</li><li>能用 PyTorch 跑通 dynamic quantization</li><li>能画出量化误差的分布直方图，验证 SNR 公式</li></ul>
+  <p class='more'>还有 1 项</p>
+</article>
+<article class="file">
+  <a class="file-head" href="https://github.com/philleer/hermes_brainstorm/blob/main/topics/ai-ml/rlhf-quantization-guide.md">
+    <span class="file-title">RLHF + 混合精度</span>
+    <span class="file-stat">0/0</span>
+  </a>
+  <div class="meter"><span style="width:0%"></span></div>
+  <ul><li class='muted'>暂无待办，或这篇还没有勾选任务</li></ul>
+  
+</article>
+</section>
+<section class="track">
+  <header>
+    <h2>C++ 工程</h2>
+    <span>0/30 · 0%</span>
+  </header>
+  <div class="meter big"><span style="width:0%"></span></div>
+  
+<article class="file">
+  <a class="file-head" href="https://github.com/philleer/hermes_brainstorm/blob/main/topics/cpp/design-patterns.md">
+    <span class="file-title">设计模式学习路径</span>
+    <span class="file-stat">0/25</span>
+  </a>
+  <div class="meter"><span style="width:0%"></span></div>
+  <ul><li>Autoware — Component 机制 &amp; 进程内通信</li><li>Autoware — Lifecycle Nodes（状态模式）</li><li>Autoware — Behavior Tree（组合模式）</li><li>Apollo — CyberRT 无锁队列 &amp; 协程调度</li><li>Apollo — 插件机制（工厂模式 + 宏反射）</li><li>Apollo — 规划/控制 Pipeline（策略模式）</li><li>Folly — FBString 动态策略模式</li><li>Folly — MPMCQueue 无锁队列 &amp; 缓存行对齐</li></ul>
+  <p class='more'>还有 17 项</p>
+</article>
+<article class="file">
+  <a class="file-head" href="https://github.com/philleer/hermes_brainstorm/blob/main/topics/cpp/poco-architecture.md">
+    <span class="file-title">POCO 架构</span>
+    <span class="file-stat">0/5</span>
+  </a>
+  <div class="meter"><span style="width:0%"></span></div>
+  <ul><li>用 Poco::NotificationCenter 实现一个简单的消息总线</li><li>基于 Poco::Net::SocketReactor 写一个简易聊天服务器</li><li>用 Poco::Data 实现一个支持多数据库后端的 DAO 层</li><li>基于 Poco::Util::Application 搭建一个带插件机制的服务框架</li><li>模仿 Poco 的 *_UNIX.cpp / *_WIN32.cpp 模式，写一个跨平台文件监控器</li></ul>
+  
+</article>
+</section>
+<section class="track">
+  <header>
+    <h2>Inbox 待整理</h2>
+    <span>0/13 · 0%</span>
+  </header>
+  <div class="meter big"><span style="width:0%"></span></div>
+  
+<article class="file">
+  <a class="file-head" href="https://github.com/philleer/hermes_brainstorm/blob/main/ideas/inbox/prompt-to-loop-engineering.md">
+    <span class="file-title">Prompt → Loop Engineering</span>
+    <span class="file-stat">0/13</span>
+  </a>
+  <div class="meter"><span style="width:0%"></span></div>
+  <ul><li>Anthropic: &quot;Harness design for long-running application development&quot; (2026-03-24)</li><li>Anthropic: &quot;How we contain Claude across products&quot; (2026-05-25)</li><li>Anthropic: &quot;Scaling Managed Agents: Decoupling the brain from the hands&quot; (2026-04-08)</li><li>Lilian Weng: &quot;LLM Powered Autonomous Agents&quot; (lilianweng.github.io)</li><li>搜索 &quot;context engineering&quot; 相关论文</li><li>阅读 Anthropic 工程博客相关文章</li><li>整理每个阶段的代表性论文和工具</li><li>对比不同 Agent 框架（LangChain、AutoGPT、Hermes）在这四个维度的设计</li></ul>
+  <p class='more'>还有 5 项</p>
+</article>
+</section>
+  <p class="hint">
+    把这个页面添加到手机主屏幕，即可随时查看进度。<br>
+    在笔记中勾选任务并 push 后，看板会自动刷新。
+    <br><a class="btn" href="https://github.com/philleer/hermes_brainstorm">打开 GitHub 仓库</a>
+  </p>
+</body>
+</html>

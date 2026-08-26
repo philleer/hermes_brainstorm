@@ -65,6 +65,24 @@ cd hermes_brainstorm
 
 ---
 
+## 📱 手机端监控进度
+
+打开 **[学习进度看板](https://philleer.github.io/hermes_brainstorm/)**，Safari / Chrome 里选「添加到主屏幕」，即可随时查看各主题完成度。
+
+| 场景 | 操作 |
+|------|------|
+| 手机看进度 | 打开看板，或 GitHub Mobile 看 [PROGRESS.md](PROGRESS.md) |
+| 勾选完成项 | 在对应笔记里把 `- [ ]` 改成 `- [x]`，然后 push |
+| 自动刷新 | 每次 push 到 `main`，GitHub Action 会重算进度并更新看板 |
+
+本地预览看板：
+
+```bash
+python3 scripts/update_progress.py
+```
+
+---
+
 ## 🔄 跨平台同步
 
 ```bash
