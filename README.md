@@ -20,13 +20,16 @@
 ```
 hermes_brainstorm/
 ├── README.md
+├── PROGRESS.md               # 进度摘要（GitHub Mobile 可看）
+├── docs/                     # 手机端进度看板（GitHub Pages）
+├── scripts/update_progress.py
 ├── ideas/
 │   └── inbox/                # 待整理的原始想法（免压区，先记下来再说）
 ├── topics/                   # 按主题归档的知识卡片
 │   ├── ai-ml/                # AI / 机器学习
 │   ├── cpp/                  # C++ 相关
 │   └── ...
-└── .gitignore
+└── .github/workflows/        # push 后自动刷新看板
 ```
 
 **两阶段工作流**：inbox 快速捕获 → 整理后归入对应 topics 子目录。
