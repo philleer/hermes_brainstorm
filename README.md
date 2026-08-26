@@ -70,9 +70,11 @@ cd hermes_brainstorm
 
 ## 📱 手机端监控进度
 
-手机浏览器打开下面地址，再选「添加到主屏幕」，即可随时查看各主题完成度：
+手机看进度请用系统浏览器打开（不需要另装 GitHub App）：
 
 https://philleer.github.io/hermes_brainstorm
+
+打开后用 Safari / Chrome 的「添加到主屏幕」。Cursor 手机 App 不会显示电脑上的文件更新。
 
 GitHub 仓库：
 
@@ -80,7 +82,7 @@ https://github.com/philleer/hermes_brainstorm
 
 | 场景 | 操作 |
 |------|------|
-| 手机看进度 | 打开看板，或 GitHub Mobile 看 [PROGRESS.md](PROGRESS.md) |
+| 手机看进度 | 系统浏览器打开看板地址 |
 | 勾选完成项 | 在对应笔记里把 `- [ ]` 改成 `- [x]`，然后 push |
 | 自动刷新 | 每次 push 到 `main`，GitHub Action 会重算进度并更新看板 |
 
