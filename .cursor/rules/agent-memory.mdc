@@ -1,0 +1,22 @@
+---
+description: Cross-app handoff via repo-local CONTEXT.md / DECISIONS.md / sessions/
+alwaysApply: true
+---
+
+# Repo working memory
+
+Before non-trivial work in this repository:
+
+1. Read `CONTEXT.md` and `DECISIONS.md` at the repo root if they exist.
+2. Treat them as the source of truth for goal, blockers, next steps, and past decisions.
+3. Do not assume you remember prior chats in other apps.
+
+When a session produces real progress (code changes, decisions, or a clear next step):
+
+1. Update `CONTEXT.md` (goal / progress / blockers / next / key paths / Updated date).
+2. Append new decisions to `DECISIONS.md` (never rewrite old entries).
+3. If the work may continue in another app, add `sessions/YYYY-MM-DD-<topic>.md`
+   using the fields in `templates/session-summary.md`.
+   Write a summary only — never dump the full transcript.
+
+Skip writes for trivial one-off questions with no lasting project state.
