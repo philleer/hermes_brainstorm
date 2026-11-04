@@ -1,12 +1,33 @@
 # Phase 1 学习计划 — 数值基础与量化原理
 
-> 每天 1-1.5 小时 | 共 12 天 | 2026.06
+> 每天 1-1.5 小时 | 共 12 天 | **2026-08-26 → 2026-09-06**
 
 ---
 
-## 第一周：从浮点数到量化公式
+## 本周 / 下周日历
 
-### Day 1（周一）— 浮点数的二进制表示
+| 周 | 日期 | Day | 主题 | 产出 |
+|----|------|-----|------|------|
+| **本周** | Wed 08-26 | 1 | 浮点数二进制表示 | `float_to_binary` 脚本 |
+| | Thu 08-27 | 2 | 精度与范围（ε / ULP / subnormal） | 理解 FP32 ~7 位有效数字 |
+| | Fri 08-28 | 3 | 对称 / 非对称量化公式 | `quantize.py` 模块 |
+| | Sat 08-29 | 4 | 量化误差与 SNR | 误差分析 + 验证 6.02B+1.76 |
+| | Sun 08-30 | 5 | Per-tensor vs Per-channel | ResNet 权重对比实验 |
+| **下周** | Mon 08-31 | 6 | 复习 + Cheat Sheet | 手写公式卡 |
+| | Tue 09-01 | 7 | PyTorch 量化基础 | dynamic quantization |
+| | Wed 09-02 | 8 | PTQ 完整流程 | calibration → INT8 |
+| | Thu 09-03 | 9 | FakeQuantize + STE | 自实现 FakeQuantize |
+| | Fri 09-04 | 10 | 层敏感度可视化 | 敏感度报告 |
+| | Sat 09-05 | 11 | 综合混合精度实验 | 实验报告 |
+| | Sun 09-06 | 12 | 总结 + Phase 2 衔接 | 过 5 道检查点 |
+
+勾选下方打卡表或笔记里的 `- [ ]` 后 push，看板会自动刷新。
+
+---
+
+## 第一周：从浮点数到量化公式（本周）
+
+### Day 1（Wed 08-26）— 浮点数的二进制表示
 
 | 时间 | 内容 |
 |------|------|
@@ -36,7 +57,7 @@ float_to_binary(1e38)  # 最大能表示多少？
 
 ---
 
-### Day 2（周二）— 浮点数的精度与范围
+### Day 2（Thu 08-27）— 浮点数的精度与范围
 
 | 时间 | 内容 |
 |------|------|
@@ -70,7 +91,7 @@ print(f"FP32 min normal: {np.float32(np.finfo(np.float32).tiny)}")
 
 ---
 
-### Day 3（周三）— 量化公式推导
+### Day 3（Fri 08-28）— 量化公式推导
 
 | 时间 | 内容 |
 |------|------|
@@ -116,7 +137,7 @@ for bits in [2, 4, 8]:
 
 ---
 
-### Day 4（周四）— 量化误差分析
+### Day 4（Sat 08-29）— 量化误差分析
 
 | 时间 | 内容 |
 |------|------|
@@ -169,7 +190,7 @@ analyze_quantization_error(x_normal, 8)
 
 ---
 
-### Day 5（周五）— Per-tensor vs Per-channel 量化
+### Day 5（Sun 08-30）— Per-tensor vs Per-channel 量化
 
 | 时间 | 内容 |
 |------|------|
@@ -221,7 +242,7 @@ plt.tight_layout()
 
 ---
 
-### Day 6（周六）— 复习 + 公式 Cheat Sheet
+### Day 6（Mon 08-31）— 复习 + 公式 Cheat Sheet
 
 | 时间 | 内容 |
 |------|------|
@@ -247,9 +268,9 @@ BF16 结构: 1 | 8 | 7
 
 ---
 
-## 第二周：从理论到实践
+## 第二周：从理论到实践（下周）
 
-### Day 7（周日）— PyTorch 量化基础
+### Day 7（Tue 09-01）— PyTorch 量化基础
 
 | 时间 | 内容 |
 |------|------|
@@ -286,7 +307,7 @@ print(f"INT8: {os.path.getsize('model_int8.pt')/1e6:.1f} MB")
 
 ---
 
-### Day 8（周一）— PTQ 完整流程
+### Day 8（Wed 09-02）— PTQ 完整流程
 
 | 时间 | 内容 |
 |------|------|
@@ -334,7 +355,7 @@ print(f"FP32 vs INT8 输出差异: {diff:.6f}")
 
 ---
 
-### Day 9（周二）— FakeQuantize 深入
+### Day 9（Thu 09-03）— FakeQuantize 深入
 
 | 时间 | 内容 |
 |------|------|
@@ -395,7 +416,7 @@ class TinyNet(nn.Module):
 
 ---
 
-### Day 10（周三）— 量化敏感度可视化
+### Day 10（Fri 09-04）— 量化敏感度可视化
 
 | 时间 | 内容 |
 |------|------|
@@ -422,7 +443,7 @@ python tools/sensitivity_analysis.py \
 
 ---
 
-### Day 11（周四）— 综合实验
+### Day 11（Sat 09-05）— 综合实验
 
 | 时间 | 内容 |
 |------|------|
@@ -446,7 +467,7 @@ python tools/sensitivity_analysis.py \
 
 ---
 
-### Day 12（周五）— 总结 + Phase 2 衔接
+### Day 12（Sun 09-06）— 总结 + Phase 2 衔接
 
 | 时间 | 内容 |
 |------|------|
@@ -467,24 +488,19 @@ python tools/sensitivity_analysis.py \
 
 ## 打卡表
 
-```
-Week 1
-□ Day 1 (周一) — 浮点数二进制表示         [ ]
-□ Day 2 (周二) — 浮点数精度与范围         [ ]
-□ Day 3 (周三) — 量化公式推导             [ ]
-□ Day 4 (周四) — 量化误差分析             [ ]
-□ Day 5 (周五) — Per-tensor vs Per-channel [ ]
-□ Day 6 (周六) — 复习 + Cheat Sheet       [ ]
-
-Week 2
-□ Day 7 (周日) — PyTorch 量化基础         [ ]
-□ Day 8 (周一) — PTQ 完整流程             [ ]
-□ Day 9 (周二) — FakeQuantize 深入        [ ]
-□ Day 10(周三) — 敏感度可视化             [ ]
-□ Day 11(周四) — 综合实验                 [ ]
-□ Day 12(周五) — 总结 + Phase 2 衔接      [ ]
-```
+- [ ] Day 1 (Wed 08-26) — 浮点数二进制表示
+- [ ] Day 2 (Thu 08-27) — 浮点数精度与范围
+- [ ] Day 3 (Fri 08-28) — 量化公式推导
+- [ ] Day 4 (Sat 08-29) — 量化误差分析
+- [ ] Day 5 (Sun 08-30) — Per-tensor vs Per-channel
+- [ ] Day 6 (Mon 08-31) — 复习 + Cheat Sheet
+- [ ] Day 7 (Tue 09-01) — PyTorch 量化基础
+- [ ] Day 8 (Wed 09-02) — PTQ 完整流程
+- [ ] Day 9 (Thu 09-03) — FakeQuantize 深入
+- [ ] Day 10(Fri 09-04) — 敏感度可视化
+- [ ] Day 11(Sat 09-05) — 综合实验
+- [ ] Day 12(Sun 09-06) — 总结 + Phase 2 衔接
 
 ---
 
-*每个 Day 的动手题都可以在 `D:\misc_codes\agent_playground\llm_practice\phase1_exercises\` 下创建对应的 `.py` 文件。*
+*每个 Day 的动手题建议放在本仓库旁的练习目录，或直接在本地 `phase1_exercises/` 下创建对应 `.py` 文件。*
